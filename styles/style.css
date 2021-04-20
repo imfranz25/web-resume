@@ -1,24 +1,17 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+/*---HTML ELEMENTS---*/
 body{
 	background-image: url(../images/c-bg.jpg);
-
 }
 *{
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	box-sizing: border-box;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'comic sans ms', sans-serif;
 }
+/*---End---*/
 
-.frame{
-	width: calc(100%);
-	border: none;
-	overflow: hidden;
-
-
-}
 
 .resume{
 	width: 900px;
@@ -434,24 +427,49 @@ color: white;
 	background: #9153c9;
 }
 
-button{
-	font-size: 25px;
-	padding: 10px 20px;
-	top: 85%;
-	left:86%;
-	background-color: rgb(81,83,83);
-	border-bottom: solid 5px black;
-	outline: none;
-	border-radius: 15px;
-	box-shadow: 0 0 10px rgb(0,0,0,.5);
-	position: fixed;
+/*--Container--*/
+.container{
 	cursor: pointer;
-	transition: .5;
-	color: white;
+	box-shadow: 0px 0px 30px cyan;
 }
-button:hover{
-	background-color: black;
-	box-shadow: 0 0 30px rgb(0,0,0,.5);
-}
+/*--End of Container--*/
 
 
+/*--Slider Wrapper--*/
+.slider_wrapper{
+	margin: 5%;
+	margin-top: 5%;
+	overflow: hidden;
+	border-radius: 20px; 
+	border:cyan solid 2px;
+}
+.slider_wrapper figure{
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0%;
+	animation: 20s slider infinite;
+}
+.slider_wrapper figure img{
+	width: 20%;
+	height: 50vh;
+	float: left;
+}
+.container:hover{
+	transition: .8s;
+	box-shadow: 0px 0px 50px 10px blue;
+	transform: rotate3d(1,1,1,360deg);
+}
+
+@keyframes slider{
+	0% {left: 0;}
+	20% {left: 0;}
+	25% {left: -100%;}
+	45% {left: -100%;}
+	50% {left: -200%;}
+	70% {left: -200%;}
+	75% {left: -300%;}
+	95% {left: -300%;}
+	100% {left: -400%;}
+}
+/*--End of Slider Wrapper--*/
