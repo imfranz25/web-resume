@@ -111,8 +111,9 @@ transition: 1s;
 	width: 80px;
 	height: 3px;
 	background: #3525af;
-
+	animation: 1s width_slider infinite;
 }
+
 .objs{
 	margin-top: -20px;
 
@@ -170,7 +171,14 @@ border:solid cyan 1px;
 	width: 40px;
 	height: 3px;
 	background-color: cyan;
+	animation: 3s width_slider infinite;
 
+}
+@keyframes width_slider{
+	0% {width:  80px;}
+	30% {width:  120px;}
+	60% {width:  160px;}
+	90% {width:  200px;}
 }
 .left .icon{
 	font-size: 20px;
@@ -430,7 +438,9 @@ color: white;
 /*--Container--*/
 .container{
 	cursor: pointer;
-	box-shadow: 0px 0px 30px cyan;
+	box-shadow: 0px 0px 2px cyan;
+	border: none;
+	margin-bottom: 20%;
 }
 /*--End of Container--*/
 
@@ -442,6 +452,7 @@ color: white;
 	overflow: hidden;
 	border-radius: 20px; 
 	border:cyan solid 2px;
+	animation: 2s border infinite;
 }
 .slider_wrapper figure{
 	position: relative;
@@ -457,8 +468,7 @@ color: white;
 }
 .container:hover{
 	transition: .8s;
-	box-shadow: 0px 0px 50px 10px blue;
-	transform: rotate3d(1,1,1,360deg);
+	box-shadow: 0px 0px 5px 1px cyan;
 }
 
 @keyframes slider{
@@ -473,3 +483,26 @@ color: white;
 	100% {left: -400%;}
 }
 /*--End of Slider Wrapper--*/
+
+.title{
+	animation: 5s rainbow infinite;
+	animation: 2s border infinite;
+	text-shadow: 3px 2px white;
+	border-radius: 10px 5px 5px 30px;
+}
+@keyframes rainbow{
+	0% {color: red; }
+	20% {color: green;  }
+	40% {color: cyan; }
+	60% {color: yellow; }
+	80% {color: magenta;}
+	100% {color: gold; }
+}
+@keyframes border{
+	0% {border-color: maroon; }
+	20% {border-color: yellow; }
+	40% {border-color: cyan; }
+	60% {border-color: indigo; }
+	80% {border-color: gold;}
+	100% {border-color: gray;}
+}
